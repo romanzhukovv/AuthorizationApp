@@ -16,11 +16,19 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userNameTF.autocorrectionType = .no
+        userNameTF.spellCheckingType = .no
+        
+        passwordTF.autocorrectionType = .no
+        passwordTF.spellCheckingType = .no
+        passwordTF.isSecureTextEntry = true
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard userNameTF.text == trueUserName, passwordTF.text == truePassword else {
-            showAlert(title: "Oops", message: "Wrong user name or password!")
+            showAlert(title: "Error", message: "Wrong user name or password!")
             return
         }
         
@@ -29,6 +37,12 @@ class LoginViewController: UIViewController {
         if let userName = userNameTF.text {
             welcomeVC.userName = userName
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
