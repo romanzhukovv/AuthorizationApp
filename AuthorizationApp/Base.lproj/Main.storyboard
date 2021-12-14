@@ -85,23 +85,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="161" translatesAutoresizingMaskIntoConstraints="NO" id="viB-sL-ZNa">
-                                <rect key="frame" x="148.5" y="180" width="117" height="228.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="160" translatesAutoresizingMaskIntoConstraints="NO" id="viB-sL-ZNa">
+                                <rect key="frame" x="30" y="180" width="354" height="230"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNq-6b-V6S">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="32.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MNq-6b-V6S">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="35"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqx-Hq-LrW">
-                                        <rect key="frame" x="0.0" y="193.5" width="117" height="35"/>
+                                        <rect key="frame" x="0.0" y="195" width="354" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Log out">
                                             <color key="titleColor" systemColor="systemPinkColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="logOutActrion:" destination="CCF-PZ-9lk" eventType="touchUpInside" id="B6U-z0-etB"/>
+                                            <segue destination="b6P-e4-vzc" kind="unwind" unwindAction="unwindFor:" id="tHx-T7-P66"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -110,7 +110,9 @@
                         <viewLayoutGuide key="safeArea" id="hvb-B0-LZM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hvb-B0-LZM" firstAttribute="trailing" secondItem="viB-sL-ZNa" secondAttribute="trailing" constant="30" id="0On-2C-YIh"/>
                             <constraint firstItem="viB-sL-ZNa" firstAttribute="centerX" secondItem="uia-KL-I2L" secondAttribute="centerX" id="QvU-eO-Wlz"/>
+                            <constraint firstItem="viB-sL-ZNa" firstAttribute="leading" secondItem="hvb-B0-LZM" secondAttribute="leading" constant="30" id="br0-9R-R5m"/>
                             <constraint firstItem="viB-sL-ZNa" firstAttribute="top" secondItem="hvb-B0-LZM" secondAttribute="top" constant="180" id="eFG-Kf-olQ"/>
                         </constraints>
                     </view>
@@ -119,6 +121,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ch9-hd-abI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="b6P-e4-vzc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="871" y="93"/>
         </scene>

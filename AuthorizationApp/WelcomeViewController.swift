@@ -10,12 +10,12 @@ import UIKit
 class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     
+    var userName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
+        welcomeLabel.text! += userName
     }
     
-    @IBAction func logOutActrion(_ sender: Any) {
-        dismiss(animated: true)
-    }
 }
