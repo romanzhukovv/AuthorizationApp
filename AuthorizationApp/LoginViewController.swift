@@ -11,27 +11,14 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    @IBOutlet var logInButton: UIButton!
+    @IBOutlet var forgotUserNameButton: UIButton!
+    @IBOutlet var forgotPasswordButton: UIButton!
+    
     private let trueUserName = "User"
     private let truePassword = "12345"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        userNameTF.autocorrectionType = .no
-        userNameTF.spellCheckingType = .no
-        
-        passwordTF.autocorrectionType = .no
-        passwordTF.spellCheckingType = .no
-        passwordTF.isSecureTextEntry = true
-        
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard userNameTF.text == trueUserName, passwordTF.text == truePassword else {
-            showAlert(title: "Error", message: "Wrong user name or password!")
-            return
-        }
-        
         let welcomeVC = segue.destination as! WelcomeViewController
         
         if let userName = userNameTF.text {
@@ -49,7 +36,22 @@ class LoginViewController: UIViewController {
         userNameTF.text = ""
         passwordTF.text = ""
     }
-
+    
+    @IBAction func buttonsAction(_ sender: UIButton) {
+        switch sender {
+        case forgotUserNameButton:
+            showAlert(title: "Your user name", message: "User")
+        case forgotPasswordButton:
+            showAlert(title: "Your password", message: "12345")
+        default:
+            guard userNameTF.text == trueUserName, passwordTF.text == truePassword else {
+                showAlert(title: "Error", message: "Wrong user name or password!")
+                return
+            }
+            performSegue(withIdentifier: "toWelcomeVC", sender: nil)
+        }
+    }
+    
 }
 
 extension LoginViewController {

@@ -25,19 +25,20 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kYZ-yJ-1Xw">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nZK-o2-ejO">
                                                 <rect key="frame" x="0.0" y="65" width="280" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xk-1b-hdB">
                                                 <rect key="frame" x="0.0" y="130" width="280" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <state key="normal" title="Log In"/>
                                                 <connections>
-                                                    <segue destination="CCF-PZ-9lk" kind="presentation" id="5zb-xM-d8z"/>
+                                                    <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ocY-IM-QhX"/>
+                                                    <segue destination="CCF-PZ-9lk" kind="presentation" identifier="toWelcomeVC" id="5zb-xM-d8z"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -49,11 +50,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="134" height="28"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Forgot User Name?"/>
+                                                <connections>
+                                                    <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yhu-tw-NZX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMG-Ju-fef">
                                                 <rect key="frame" x="154" y="0.0" width="126" height="28"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Forgot Password?"/>
+                                                <connections>
+                                                    <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rfJ-Oc-IwV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -69,6 +76,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="forgotPasswordButton" destination="BMG-Ju-fef" id="cLS-fa-g8v"/>
+                        <outlet property="forgotUserNameButton" destination="26K-Gp-hBD" id="Sih-u6-M62"/>
+                        <outlet property="logInButton" destination="2Xk-1b-hdB" id="MA2-Ks-gZ8"/>
                         <outlet property="passwordTF" destination="nZK-o2-ejO" id="rcV-rA-qel"/>
                         <outlet property="userNameTF" destination="kYZ-yJ-1Xw" id="qdO-iK-HaW"/>
                     </connections>
