@@ -18,6 +18,10 @@ class LoginViewController: UIViewController {
     private let trueUserName = "User"
     private let truePassword = "12345"
     
+    override func viewWillLayoutSubviews() {
+        fillGradient(colorOne: UIColor.systemOrange, colorTwo: UIColor.systemPurple)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let welcomeVC = segue.destination as! WelcomeViewController
         
@@ -28,7 +32,7 @@ class LoginViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        self.view.endEditing(true)
+        view.endEditing(true)
     
     }
     
@@ -51,7 +55,6 @@ class LoginViewController: UIViewController {
             performSegue(withIdentifier: "toWelcomeVC", sender: nil)
         }
     }
-    
 }
 
 extension LoginViewController {
@@ -63,6 +66,13 @@ extension LoginViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    private func fillGradient(colorOne: UIColor, colorTwo: UIColor) {
+        let gradiendLayer = CAGradientLayer()
+        gradiendLayer.frame = view.bounds
+        gradiendLayer.colors = [colorOne.cgColor, colorTwo.cgColor]
+        view.layer.insertSublayer(gradiendLayer, at: 0)
     }
 }
 

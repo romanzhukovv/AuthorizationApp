@@ -19,5 +19,4 @@ class WelcomeViewController: UIViewController {
             welcomeLabel.text?.append(userName)
         }
     }
-    
 }
