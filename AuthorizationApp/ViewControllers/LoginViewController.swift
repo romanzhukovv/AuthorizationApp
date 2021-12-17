@@ -52,7 +52,6 @@ class LoginViewController: UIViewController {
                 showAlert(title: "Error", message: "Wrong user name or password!")
                 return
             }
-            performSegue(withIdentifier: "toWelcomeVC", sender: nil)
         }
     }
 }
@@ -61,7 +60,6 @@ extension LoginViewController {
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-            self.userNameTF.text = ""
             self.passwordTF.text = ""
         }
         alert.addAction(okAction)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC162B9D276D1CBE00738380 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC162B9C276D1CBE00738380 /* UserModel.swift */; };
 		FC9632F5276863A1006C891C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9632F4276863A1006C891C /* AppDelegate.swift */; };
 		FC9632F7276863A1006C891C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9632F6276863A1006C891C /* SceneDelegate.swift */; };
 		FC9632F9276863A1006C891C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9632F8276863A1006C891C /* LoginViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC162B9C276D1CBE00738380 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		FC9632F1276863A1006C891C /* AuthorizationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthorizationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9632F4276863A1006C891C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9632F6276863A1006C891C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC162B99276D1C2D00738380 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC9632F8276863A1006C891C /* LoginViewController.swift */,
+				FC9633082768666E006C891C /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FC162B9A276D1C6D00738380 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FC9632FA276863A1006C891C /* Main.storyboard */,
+				FC9632FF276863A2006C891C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FC162B9B276D1C8D00738380 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC162B9C276D1CBE00738380 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC162B9E276D1E2A00738380 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC9632FD276863A2006C891C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FC162B9F276D1E6500738380 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FC963302276863A2006C891C /* Info.plist */,
+				FC9632F4276863A1006C891C /* AppDelegate.swift */,
+				FC9632F6276863A1006C891C /* SceneDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		FC9632E8276863A1006C891C = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +104,11 @@
 		FC9632F3276863A1006C891C /* AuthorizationApp */ = {
 			isa = PBXGroup;
 			children = (
-				FC9632F4276863A1006C891C /* AppDelegate.swift */,
-				FC9632F6276863A1006C891C /* SceneDelegate.swift */,
-				FC9632F8276863A1006C891C /* LoginViewController.swift */,
-				FC9633082768666E006C891C /* WelcomeViewController.swift */,
-				FC9632FA276863A1006C891C /* Main.storyboard */,
-				FC9632FD276863A2006C891C /* Assets.xcassets */,
-				FC9632FF276863A2006C891C /* LaunchScreen.storyboard */,
-				FC963302276863A2006C891C /* Info.plist */,
+				FC162B9F276D1E6500738380 /* SupportFiles */,
+				FC162B9B276D1C8D00738380 /* Models */,
+				FC162B99276D1C2D00738380 /* ViewControllers */,
+				FC162B9A276D1C6D00738380 /* Storyboards */,
+				FC162B9E276D1E2A00738380 /* Resources */,
 			);
 			path = AuthorizationApp;
 			sourceTree = "<group>";
@@ -143,6 +186,7 @@
 				FC9632F9276863A1006C891C /* LoginViewController.swift in Sources */,
 				FC9633092768666E006C891C /* WelcomeViewController.swift in Sources */,
 				FC9632F5276863A1006C891C /* AppDelegate.swift in Sources */,
+				FC162B9D276D1CBE00738380 /* UserModel.swift in Sources */,
 				FC9632F7276863A1006C891C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ARG8W2BQX;
-				INFOPLIST_FILE = AuthorizationApp/Info.plist;
+				INFOPLIST_FILE = AuthorizationApp/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ARG8W2BQX;
-				INFOPLIST_FILE = AuthorizationApp/Info.plist;
+				INFOPLIST_FILE = AuthorizationApp/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
