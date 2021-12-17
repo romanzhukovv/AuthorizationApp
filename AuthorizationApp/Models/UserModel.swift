@@ -8,4 +8,28 @@
 struct User {
     let userName: String
     let password: String
+    
+    let person: Person
+    
+    static func getUser() -> User {
+        User(userName: "User",
+             password: "12345",
+             person: Person(name: "Roman",
+                            surname: "Zhukov",
+                            age: 27,
+                            job: "Junior iOS Developer",
+                            location: "Moscow",
+                            hobbies: ["Programming", "Footbal", "Gaming", "Books"])
+        )
+    }
+}
+
+struct Person {
+    let name: String
+    let surname: String
+    
+    let age: Int
+    let job: String
+    let location: String
+    let hobbies: [String]
 }
