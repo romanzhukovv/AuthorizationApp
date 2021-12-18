@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC162B9D276D1CBE00738380 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC162B9C276D1CBE00738380 /* UserModel.swift */; };
+		FC25B89F276E1C26001F52B7 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25B89E276E1C26001F52B7 /* AboutMeViewController.swift */; };
 		FC9632F5276863A1006C891C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9632F4276863A1006C891C /* AppDelegate.swift */; };
 		FC9632F7276863A1006C891C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9632F6276863A1006C891C /* SceneDelegate.swift */; };
 		FC9632F9276863A1006C891C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9632F8276863A1006C891C /* LoginViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		FC162B9C276D1CBE00738380 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		FC25B89E276E1C26001F52B7 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		FC9632F1276863A1006C891C /* AuthorizationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthorizationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9632F4276863A1006C891C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC9632F6276863A1006C891C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				FC9632F8276863A1006C891C /* LoginViewController.swift */,
+				FC25B89E276E1C26001F52B7 /* AboutMeViewController.swift */,
 				FC9633082768666E006C891C /* WelcomeViewController.swift */,
 			);
 			path = ViewControllers;
@@ -187,6 +190,7 @@
 				FC9633092768666E006C891C /* WelcomeViewController.swift in Sources */,
 				FC9632F5276863A1006C891C /* AppDelegate.swift in Sources */,
 				FC162B9D276D1CBE00738380 /* UserModel.swift in Sources */,
+				FC25B89F276E1C26001F52B7 /* AboutMeViewController.swift in Sources */,
 				FC9632F7276863A1006C891C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
