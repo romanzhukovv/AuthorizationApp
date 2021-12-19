@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as! UITabBarController
-        let viewControllers = tabBarController.viewControllers!     //  Не понимаю почему тут восклицательный знак(
+        let viewControllers = tabBarController.viewControllers!     //  Евгения, подскажите пожалуйста, почему тут восклицательный знак нужен?
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
@@ -71,7 +71,7 @@ extension LoginViewController {
         present(alert, animated: true)
     }
     
-     private func fillGradient(colorOne: UIColor, colorTwo: UIColor) {
+    private func fillGradient(colorOne: UIColor, colorTwo: UIColor) {
         let gradiendLayer = CAGradientLayer()
         gradiendLayer.frame = view.bounds
         gradiendLayer.colors = [colorOne.cgColor, colorTwo.cgColor]
