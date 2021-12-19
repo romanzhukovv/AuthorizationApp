@@ -8,9 +8,15 @@
 import UIKit
 
 class AboutMeViewController: UIViewController {
+    @IBOutlet var aboutMeLabel: UILabel!
+    
+    var aboutMe: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let aboutMe = aboutMe {
+            aboutMeLabel.text = aboutMe
+        }
     }
 }

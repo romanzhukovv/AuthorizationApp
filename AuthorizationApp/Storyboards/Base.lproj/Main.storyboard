@@ -101,17 +101,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="160" translatesAutoresizingMaskIntoConstraints="NO" id="viB-sL-ZNa">
-                                <rect key="frame" x="30" y="180" width="260" height="230"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="viB-sL-ZNa">
+                                <rect key="frame" x="30" y="70" width="260" height="422.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MNq-6b-V6S">
-                                        <rect key="frame" x="0.0" y="0.0" width="260" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="107.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🕥" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABP-5k-XBi">
+                                        <rect key="frame" x="0.0" y="157.5" width="260" height="107.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqx-Hq-LrW">
-                                        <rect key="frame" x="0.0" y="195" width="260" height="35"/>
+                                        <rect key="frame" x="0.0" y="315" width="260" height="107.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Log out">
                                             <color key="titleColor" systemColor="systemPinkColor"/>
@@ -129,11 +135,12 @@
                             <constraint firstItem="hvb-B0-LZM" firstAttribute="trailing" secondItem="viB-sL-ZNa" secondAttribute="trailing" constant="30" id="0On-2C-YIh"/>
                             <constraint firstItem="viB-sL-ZNa" firstAttribute="centerX" secondItem="uia-KL-I2L" secondAttribute="centerX" id="QvU-eO-Wlz"/>
                             <constraint firstItem="viB-sL-ZNa" firstAttribute="leading" secondItem="hvb-B0-LZM" secondAttribute="leading" constant="30" id="br0-9R-R5m"/>
-                            <constraint firstItem="viB-sL-ZNa" firstAttribute="top" secondItem="hvb-B0-LZM" secondAttribute="top" constant="180" id="eFG-Kf-olQ"/>
+                            <constraint firstItem="viB-sL-ZNa" firstAttribute="top" secondItem="hvb-B0-LZM" secondAttribute="top" constant="70" id="eFG-Kf-olQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="CEF-cA-fBv"/>
                     <connections>
+                        <outlet property="avatarLabel" destination="ABP-5k-XBi" id="IXP-5l-nlB"/>
                         <outlet property="welcomeLabel" destination="MNq-6b-V6S" id="3xc-ib-NIF"/>
                     </connections>
                 </viewController>
@@ -169,12 +176,28 @@
                     <view key="view" contentMode="scaleToFill" id="arD-bl-7nI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gba-Cb-nmx">
+                                <rect key="frame" x="20" y="144" width="280" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mhp-0O-QkY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mhp-0O-QkY" firstAttribute="trailing" secondItem="gba-Cb-nmx" secondAttribute="trailing" constant="20" id="4r4-CY-o0x"/>
+                            <constraint firstItem="gba-Cb-nmx" firstAttribute="top" secondItem="mhp-0O-QkY" secondAttribute="top" constant="100" id="HBS-dN-SgC"/>
+                            <constraint firstItem="gba-Cb-nmx" firstAttribute="leading" secondItem="mhp-0O-QkY" secondAttribute="leading" constant="20" id="mWK-hU-vKm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Name" id="z6M-8M-lbE">
                         <barButtonItem key="backBarButtonItem" title="Back" id="RsU-UJ-ox8"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="aboutMeLabel" destination="gba-Cb-nmx" id="kUq-iK-h4B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cp-Fb-kYL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

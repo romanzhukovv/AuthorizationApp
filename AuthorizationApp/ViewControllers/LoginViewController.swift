@@ -29,11 +29,19 @@ class LoginViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 if let userName = userNameTF.text {
                     welcomeVC.userName = userName
+                    welcomeVC.userAvatar = someUser.avatar
                 }
             } else if let navigationVC = viewController as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
-                aboutUserVC.navigationItem.title = someUser.person.name
-                aboutUserVC.navigationItem.title?.append(" \(someUser.person.surname)")
+                aboutUserVC.navigationItem.title = "\(someUser.person.name) \(someUser.person.surname)"
+
+                aboutUserVC.aboutMe = """
+                                      My name is \(someUser.person.name) \(someUser.person.surname).
+                                      I'm \(someUser.person.age) years old.
+                                      My profission is \(someUser.person.job), and it is impressive.
+                                      I live in \(someUser.person.location).
+                                      I like \(someUser.person.hobby)
+                                      """
             }
         }
     }
