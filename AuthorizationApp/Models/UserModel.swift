@@ -21,7 +21,7 @@ struct User {
                             age: 27,
                             job: "Junior iOS Developer",
                             location: "Moscow",
-                            hobby: "Programming"
+                            hobby: "Footbal"
              )
         )
     }

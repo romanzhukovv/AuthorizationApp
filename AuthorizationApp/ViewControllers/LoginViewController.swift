@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var forgotUserNameButton: UIButton!
     @IBOutlet var forgotPasswordButton: UIButton!
     
-    let someUser = User.getUser()
+    private let someUser = User.getUser()
     
     override func viewWillLayoutSubviews() {
         fillGradient(colorOne: UIColor.systemOrange, colorTwo: UIColor.systemPurple)
@@ -23,25 +23,14 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as! UITabBarController
-        let viewControllers = tabBarController.viewControllers!     //  Не понимаю почему тут восклицательный знак
+        let viewControllers = tabBarController.viewControllers!     //  Не понимаю почему тут восклицательный знак(
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                if let userName = userNameTF.text {
-                    welcomeVC.userName = userName
-                    welcomeVC.userAvatar = someUser.avatar
-                }
+                welcomeVC.user = someUser
             } else if let navigationVC = viewController as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
-                aboutUserVC.navigationItem.title = "\(someUser.person.name) \(someUser.person.surname)"
-
-                aboutUserVC.aboutMe = """
-                                      My name is \(someUser.person.name) \(someUser.person.surname).
-                                      I'm \(someUser.person.age) years old.
-                                      My profission is \(someUser.person.job), and it is impressive.
-                                      I live in \(someUser.person.location).
-                                      I like \(someUser.person.hobby)
-                                      """
+                aboutUserVC.user = someUser
             }
         }
     }
